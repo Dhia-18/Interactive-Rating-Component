@@ -1,0 +1,163 @@
+@import url("reset.css");
+
+:root{
+    --orange:hsl(25, 97%, 53%);
+    --light-grey:hsl(217, 12%, 63%);
+    --dark-blue:hsl(213, 19%, 18%);
+    --light-blue:hsl(214, 19%, 24%);
+    --very-dark-blue:hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: "Overpass";
+    font-size: 15px;
+}
+
+h1{
+    color:white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+p{
+    color:var(--light-grey);
+}
+
+body{
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: var(--dark-blue);
+    width:92%;
+    max-width:27rem;
+    padding:1.5rem;
+
+    border-radius: 15px;
+
+}
+
+
+/* Styling the main container */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1.5rem;
+}
+
+#star-icon{
+    background-color: var(--light-blue);
+    padding:0.7rem;
+    border-radius: 100%;
+}
+
+button{
+    cursor: pointer;
+    width:100%;
+    height: 2.5rem;
+
+    background-color: var(--orange);
+    color:var(--very-dark-blue);
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    border:none;
+    border-radius: 25px;
+}
+
+button:hover{
+    background-color: white;
+}
+
+/* Styling the Radio Input */
+
+.rate-container{
+    display: flex;
+    gap:1.3rem;
+}
+
+input{
+    cursor: pointer;
+    appearance: none;
+
+    width:2.9rem;
+    height: 2.9rem;
+    border-radius: 100%;
+    background-color: var(--light-blue);
+    color:var(--light-grey);
+    font-weight: 700;
+
+    display: grid;
+    place-content: center;
+}
+
+@media (max-width:22rem){
+    .rate-container{
+        width:100%;
+    }
+}
+
+@media (min-width:25em){
+    input{
+        width:3.7rem;
+        height: 3.7rem;
+    }
+}
+
+input:checked{
+    background-color: white;
+    color:var(--very-dark-blue);
+}
+
+input:hover{
+    background-color: var(--orange);
+    color:var(--very-dark-blue);
+}
+
+input:nth-child(1)::before{
+    content: "1";
+}
+input:nth-child(2)::before{
+    content: "2";
+}
+input:nth-child(3)::before{
+    content: "3";
+}
+input:nth-child(4)::before{
+    content: "4";
+}
+input:nth-child(5)::before{
+    content: "5";
+}
+
+/* Styling the Thank you message */
+
+.thanks-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:1rem;
+}
+
+#selection-text{
+    margin:1rem 0;
+
+    color:var(--orange);
+    opacity: 0.9;
+    background-color: var(--light-blue);
+    padding:0.3rem 1rem 0.1rem 1rem;
+    border-radius: 20px;
+}
+
+.hidden{
+    display: none;
+}
